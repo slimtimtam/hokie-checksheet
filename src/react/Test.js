@@ -11,6 +11,9 @@ const options = [
   },
   {
     value: 'Basket Weaving'
+  },
+  {
+    value: 'Mathmatics'
   }
 ]
 class Test extends React.Component
