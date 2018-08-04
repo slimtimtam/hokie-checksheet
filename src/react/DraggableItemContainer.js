@@ -14,12 +14,17 @@ class DraggableItemContainer extends React.Component
     ]
   }
 
+  deleteItem = (id) => {
+    // TODO: Figure out how/if to implement
+  }
+
   render() {
     return (
       <div className="semester-draggable-class-item-container"
            border="1px black">
         {this.state.items.map((item, index) =>(
-          <DraggableClassItem key = {item.id} item={item} />
+          <DraggableClassItem key = {item.id} item={item} handleDrop={(id) =>
+            this.deleteItem(id)} />
         ))}
       </div>
     );

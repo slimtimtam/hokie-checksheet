@@ -23,9 +23,10 @@ class DraggableClassItem extends React.Component
 {
   render() {
     const { isDragging, connectDragSource, item } = this.props
+    const opacity = isDragging ? 0 : 1;
 
     return connectDragSource(
-      <div className="draggable-class-item-source">
+      <div className="draggable-class-item-source" style={{ opacity }}>
         <span>{item.name}</span>
       </div>
     );
